@@ -10009,5 +10009,33 @@ textarea.form-control {
   }
 }
 
+/* Language Toggle Button */
+#languageToggle {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+#languageToggle:hover {
+  color: #2b98f0
+  transform: scale(1.05);
+}
+
+#languageToggle .fa-globe {
+  margin-right: 5px;
+  font-size: 1.1em;
+}
+
+#currentLang {
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background: rgba(255, 193, 7, 0.1);
+  transition: all 0.3s ease;
+}
+
+#languageToggle:hover #currentLang {
+  background: rgba(255, 193, 7, 0.2);
+}
+
 
 
