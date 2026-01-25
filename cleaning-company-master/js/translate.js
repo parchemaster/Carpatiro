@@ -175,7 +175,8 @@
             'footer.blog': 'Blog',
             'footer.contact': 'Contact',
             'footer.questions': 'Have a Questions?',
-            'testimony.title': 'Happy Customer'
+            'testimony.title': 'Happy Customer',
+            'menu.language': 'Menu'
         },
         ro: {
             'nav.home': 'Acasă',
@@ -348,7 +349,8 @@
             'footer.blog': 'Blog',
             'footer.contact': 'Contact',
             'footer.questions': 'Ai Întrebări?',
-            'testimony.title': 'Clienți Mulțumiți'
+            'testimony.title': 'Clienți Mulțumiți',
+            'menu.language': 'Meniu'
         }
     };
 
