@@ -856,55 +856,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 d-flex align-items-stretch">
-                  <div class="contact-wrap w-100 p-md-5 p-4">
-                    <h3 class="mb-4">Send Us a Message</h3>
-                    <form id="contactForm" name="contactForm" class="contactForm">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="name">Full Name</label>
-                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="email">Email Address</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="your.email@example.com" required>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="phone">Phone Number</label>
-                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="+40 XXX XXX XXX">
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="subject">Subject</label>
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <label class="label" for="message">Message</label>
-                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Tell us about your cleaning needs..." required></textarea>
-                          </div>
-                        </div>
-                        <div class="col-md-12">
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                            <div class="submitting"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <div id="form-message-warning" class="mb-4" style="display: none; color: #dc3545;"></div>
-                    <div id="form-message-success" class="mb-4" style="display: none; color: #28a745;">
-                      Your message was sent successfully. We'll get back to you soon!
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -981,77 +933,6 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
 
-  <!-- Contact Form Script -->
-  <script>
-    $(document).ready(function() {
-      $('#contactForm').on('submit', function(e) {
-        e.preventDefault();
-
-        var name = $('#name').val();
-        var email = $('#email').val();
-        var phone = $('#phone').val();
-        var subject = $('#subject').val();
-        var message = $('#message').val();
-
-        // Validation
-        if (!name || !email || !subject || !message) {
-          $('#form-message-warning').text('Please fill in all required fields.').show();
-          $('#form-message-success').hide();
-          return;
-        }
-
-        // Email validation
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(email)) {
-          $('#form-message-warning').text('Please enter a valid email address.').show();
-          $('#form-message-success').hide();
-          return;
-        }
-
-        // Show loading state
-        $('.submitting').html('<div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Sending...</span></div>');
-        $('#form-message-warning').hide();
-        $('#form-message-success').hide();
-
-        // Send form data to PHP backend
-        $.ajax({
-          url: 'contact.php',
-          method: 'POST',
-          data: {
-            name: name,
-            email: email,
-            phone: phone,
-            subject: subject,
-            message: message
-          },
-          dataType: 'json',
-          success: function(response) {
-            $('.submitting').html('');
-
-            if (response.success) {
-              $('#form-message-success').show();
-              $('#form-message-warning').hide();
-              $('#contactForm')[0].reset();
-
-              // Hide success message after 5 seconds
-              setTimeout(function() {
-                $('#form-message-success').fadeOut();
-              }, 5000);
-            } else {
-              $('#form-message-warning').text('Failed to send message. Please try again.').show();
-              $('#form-message-success').hide();
-            }
-          },
-          error: function(xhr, status, error) {
-            $('.submitting').html('');
-            $('#form-message-warning').text('Sorry, something went wrong. Please try again or contact us directly.').show();
-            $('#form-message-success').hide();
-            console.error('Error:', error);
-          }
-        });
-      });
-    });
-  </script>
 
   </body>
 </html>
