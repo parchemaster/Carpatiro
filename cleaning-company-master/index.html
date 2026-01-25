@@ -1009,41 +1009,13 @@
         }
 
         // Show loading state
-        $('.submitting').html('<div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Loading...</span></div>');
+        $('.submitting').html('<div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Sending...</span></div>');
         $('#form-message-warning').hide();
         $('#form-message-success').hide();
 
-        // Create mailto link (client-side email)
-        var mailtoLink = 'mailto:info@yourdomain.com?' +
-          'subject=' + encodeURIComponent(subject) +
-          '&body=' + encodeURIComponent(
-            'Name: ' + name + '\n' +
-            'Email: ' + email + '\n' +
-            'Phone: ' + phone + '\n\n' +
-            'Message:\n' + message
-          );
-
-        // Option 1: Open default email client
-        window.location.href = mailtoLink;
-
-        // Show success message after a short delay
-        setTimeout(function() {
-          $('.submitting').html('');
-          $('#form-message-success').show();
-          $('#contactForm')[0].reset();
-
-          // Hide success message after 5 seconds
-          setTimeout(function() {
-            $('#form-message-success').fadeOut();
-          }, 5000);
-        }, 500);
-
-        /*
-        // Option 2: If you want to use a backend service like FormSubmit, EmailJS, or your own PHP script
-        // Uncomment and modify this section:
-
+        // Send form data to PHP backend
         $.ajax({
-          url: 'https://formsubmit.co/your-email@example.com', // Replace with your email or backend URL
+          url: 'contact.php',
           method: 'POST',
           data: {
             name: name,
@@ -1055,21 +1027,28 @@
           dataType: 'json',
           success: function(response) {
             $('.submitting').html('');
-            $('#form-message-success').show();
-            $('#form-message-warning').hide();
-            $('#contactForm')[0].reset();
 
-            setTimeout(function() {
-              $('#form-message-success').fadeOut();
-            }, 5000);
+            if (response.success) {
+              $('#form-message-success').show();
+              $('#form-message-warning').hide();
+              $('#contactForm')[0].reset();
+
+              // Hide success message after 5 seconds
+              setTimeout(function() {
+                $('#form-message-success').fadeOut();
+              }, 5000);
+            } else {
+              $('#form-message-warning').text('Failed to send message. Please try again.').show();
+              $('#form-message-success').hide();
+            }
           },
           error: function(xhr, status, error) {
             $('.submitting').html('');
             $('#form-message-warning').text('Sorry, something went wrong. Please try again or contact us directly.').show();
             $('#form-message-success').hide();
+            console.error('Error:', error);
           }
         });
-        */
       });
     });
   </script>
