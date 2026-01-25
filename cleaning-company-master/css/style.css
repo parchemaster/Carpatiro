@@ -9767,7 +9767,7 @@ textarea.form-control {
 /* Fixed height for all col-md-6 col-lg-3 divs */
 .col-md-6.col-lg-3.ftco-animate {
   display: flex;
-  min-height: 400px;
+  min-height: 450px;
 }
 
 .col-md-6.col-lg-3.ftco-animate .block-7,
@@ -9786,4 +9786,18 @@ textarea.form-control {
 .col-md-6.col-lg-3.ftco-animate .block-7 .pricing-text {
   flex-grow: 1;
 }
+
+/* Responsive adjustments for pricing sections */
+@media (max-width: 991.98px) {
+  .col-md-6.col-lg-3.ftco-animate {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .col-md-6.col-lg-3.ftco-animate {
+    min-height: auto;
+  }
+}
+
 
