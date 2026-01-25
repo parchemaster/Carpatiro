@@ -9938,8 +9938,12 @@ textarea.form-control {
 }
 
 .whatsapp-icon {
-  margin-top: 5px;
+  margin: 0;
   color: #FFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 /* WhatsApp button animation */
