@@ -176,7 +176,11 @@
             'footer.contact': 'Contact',
             'footer.questions': 'Have a Questions?',
             'testimony.title': 'Happy Customer',
-            'menu.language': 'Menu'
+            'menu.language': 'Menu',
+            'home': 'Home',
+            "services": "Services",
+            "portfolio": "Portfolio",
+            "pricing": "Pricing",
         },
         ro: {
             'nav.home': 'Acasă',
@@ -350,7 +354,12 @@
             'footer.contact': 'Contact',
             'footer.questions': 'Ai Întrebări?',
             'testimony.title': 'Clienți Mulțumiți',
-            'menu.language': 'Meniu'
+            'menu.language': 'Meniu',
+            'home': 'Acasă',
+            "services": "Servicii",
+            "portfolio": "Portofoliu",
+            "pricing": "Prețuri",
+
         }
     };
 
