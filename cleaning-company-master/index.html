@@ -805,6 +805,112 @@
     	</div>
     </section>
 
+    <!-- Contact Form Section -->
+    <section class="ftco-section contact-section" id="contact">
+      <div class="container">
+        <div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading mb-3">Get In Touch</span>
+            <h2>Contact Us</h2>
+            <p>Have questions or ready to book? Send us a message and we'll get back to you as soon as possible!</p>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="wrapper">
+              <div class="row no-gutters">
+                <div class="col-md-6 d-flex align-items-stretch">
+                  <div class="contact-wrap w-100 p-md-5 p-4" style="background: #2b98f0;">
+                    <h3 class="mb-4 text-white">Contact Information</h3>
+                    <div class="dbox w-100 d-flex align-items-start">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="fa fa-map-marker"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p class="text-white"><span>Address:</span> 203 Fake St. Mountain View, San Francisco, California, USA</p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="fa fa-phone"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p class="text-white"><span>Phone:</span> <a href="tel:+23923929210" class="text-white">+2 392 3929 210</a></p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="fa fa-paper-plane"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p class="text-white"><span>Email:</span> <a href="mailto:info@yourdomain.com" class="text-white">info@yourdomain.com</a></p>
+                      </div>
+                    </div>
+                    <div class="dbox w-100 d-flex align-items-center">
+                      <div class="icon d-flex align-items-center justify-content-center">
+                        <span class="fa fa-whatsapp"></span>
+                      </div>
+                      <div class="text pl-3">
+                        <p class="text-white"><span>WhatsApp:</span> <a href="https://wa.me/23923929210" class="text-white" target="_blank">+2 392 3929 210</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex align-items-stretch">
+                  <div class="contact-wrap w-100 p-md-5 p-4">
+                    <h3 class="mb-4">Send Us a Message</h3>
+                    <form id="contactForm" name="contactForm" class="contactForm">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="name">Full Name</label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="email">Email Address</label>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="your.email@example.com" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="phone">Phone Number</label>
+                            <input type="tel" class="form-control" name="phone" id="phone" placeholder="+40 XXX XXX XXX">
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="subject">Subject</label>
+                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label class="label" for="message">Message</label>
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="4" placeholder="Tell us about your cleaning needs..." required></textarea>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                            <div class="submitting"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div id="form-message-warning" class="mb-4" style="display: none; color: #dc3545;"></div>
+                    <div id="form-message-success" class="mb-4" style="display: none; color: #28a745;">
+                      Your message was sent successfully. We'll get back to you soon!
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer ftco-section">
 			<div class="container">
@@ -851,6 +957,14 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/23923929210?text=Hello%2C%20I%27m%20interested%20in%20your%20cleaning%20services"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     title="Contact us on WhatsApp">
+    <i class="fa fa-whatsapp whatsapp-icon"></i>
+  </a>
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -866,6 +980,99 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+
+  <!-- Contact Form Script -->
+  <script>
+    $(document).ready(function() {
+      $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var phone = $('#phone').val();
+        var subject = $('#subject').val();
+        var message = $('#message').val();
+
+        // Validation
+        if (!name || !email || !subject || !message) {
+          $('#form-message-warning').text('Please fill in all required fields.').show();
+          $('#form-message-success').hide();
+          return;
+        }
+
+        // Email validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          $('#form-message-warning').text('Please enter a valid email address.').show();
+          $('#form-message-success').hide();
+          return;
+        }
+
+        // Show loading state
+        $('.submitting').html('<div class="spinner-border spinner-border-sm text-primary" role="status"><span class="sr-only">Loading...</span></div>');
+        $('#form-message-warning').hide();
+        $('#form-message-success').hide();
+
+        // Create mailto link (client-side email)
+        var mailtoLink = 'mailto:info@yourdomain.com?' +
+          'subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(
+            'Name: ' + name + '\n' +
+            'Email: ' + email + '\n' +
+            'Phone: ' + phone + '\n\n' +
+            'Message:\n' + message
+          );
+
+        // Option 1: Open default email client
+        window.location.href = mailtoLink;
+
+        // Show success message after a short delay
+        setTimeout(function() {
+          $('.submitting').html('');
+          $('#form-message-success').show();
+          $('#contactForm')[0].reset();
+
+          // Hide success message after 5 seconds
+          setTimeout(function() {
+            $('#form-message-success').fadeOut();
+          }, 5000);
+        }, 500);
+
+        /*
+        // Option 2: If you want to use a backend service like FormSubmit, EmailJS, or your own PHP script
+        // Uncomment and modify this section:
+
+        $.ajax({
+          url: 'https://formsubmit.co/your-email@example.com', // Replace with your email or backend URL
+          method: 'POST',
+          data: {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message
+          },
+          dataType: 'json',
+          success: function(response) {
+            $('.submitting').html('');
+            $('#form-message-success').show();
+            $('#form-message-warning').hide();
+            $('#contactForm')[0].reset();
+
+            setTimeout(function() {
+              $('#form-message-success').fadeOut();
+            }, 5000);
+          },
+          error: function(xhr, status, error) {
+            $('.submitting').html('');
+            $('#form-message-warning').text('Sorry, something went wrong. Please try again or contact us directly.').show();
+            $('#form-message-success').hide();
+          }
+        });
+        */
+      });
+    });
+  </script>
+
   </body>
 </html>
