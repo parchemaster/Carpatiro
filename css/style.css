@@ -472,7 +472,8 @@ pre {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-right: -15px;
-  margin-left: -15px; }
+  margin-left: -15px;
+}
 
 .no-gutters {
   margin-right: 0;
@@ -8070,7 +8071,7 @@ h1, h2, h3, h4, h5,
     font-size: 20px;
     line-height: 1; }
     .ftco-navbar-light .navbar-brand span {
-      color: #f3e53d;
+      color: #2b98f0;
       position: relative; }
     .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
       color: #000000; }
@@ -8099,7 +8100,7 @@ h1, h2, h3, h4, h5,
       height: 2px;
       bottom: 0px;
       left: 0;
-      background-color: #f3e53d;
+      background-color: #2b98f0;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -8109,10 +8110,10 @@ h1, h2, h3, h4, h5,
       transition: all 0.5s ease-in-out 0s;
       z-index: -1; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #f3e53d; }
+      color: #2b98f0; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
         visibility: visible;
-        background-color: #f3e53d;
+        background-color: #2b98f0;
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
         transform: scaleX(1); }
@@ -8160,10 +8161,10 @@ h1, h2, h3, h4, h5,
         background: #2b98f0;
         border-radius: 4px; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #f3e53d; }
+    color: #2b98f0; }
     .ftco-navbar-light .navbar-nav > .nav-item.active > a:before {
       visibility: visible;
-      background-color: #f3e53d;
+      background-color: #2b98f0;
       -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
       transform: scaleX(1); }
@@ -9789,6 +9790,11 @@ textarea.form-control {
   flex-grow: 1;
 }
 
+.nav-controls  {
+    display: flex;
+  flex-direction: row;
+}
+
 /* Display 3 cards per row on large screens (lg) */
 @media (min-width: 992px) {
   .col-md-6.col-lg-3.ftco-animate {
@@ -10024,10 +10030,11 @@ textarea.form-control {
 #languageToggle {
   transition: all 0.3s ease;
   font-weight: 500;
+  cursor: pointer;
 }
 
 #languageToggle:hover {
-  color: #2b98f0
+  color: #2b98f0;
   transform: scale(1.05);
 }
 
@@ -10046,6 +10053,70 @@ textarea.form-control {
 
 #languageToggle:hover #currentLang {
   background: rgba(255, 193, 7, 0.2);
+}
+
+/* Language Dropdown Menu */
+.nav-controls .dropdown {
+  display: inline-block;
+}
+
+.nav-controls .dropdown-menu {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 100px;
+  margin-top: 0 !important;
+  top: 100% !important;
+}
+
+.nav-controls .dropdown-item {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  color: #333;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-controls .dropdown-item:hover {
+  background-color: #2b98f0;
+  color: #000;
+}
+
+.nav-controls .dropdown-item .flag-icon {
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+
+.nav-controls .dropdown-item:active {
+  background-color: #2b98f0;
+  color: #fff;
+}
+
+/* For navbar items with dropdown */
+.navbar-nav .dropdown-menu {
+  margin-top: 0 !important;
+  top: 100% !important;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+@media (max-width: 991.98px) {
+  .nav-controls .dropdown-menu {
+    position: absolute !important;
+    right: 0;
+    left: auto;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+  }
 }
 
 
