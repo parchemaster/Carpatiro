@@ -8071,7 +8071,7 @@ h1, h2, h3, h4, h5,
     font-size: 20px;
     line-height: 1; }
     .ftco-navbar-light .navbar-brand span {
-      color: #f3e53d;
+      color: #2b98f0;
       position: relative; }
     .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
       color: #000000; }
@@ -8100,7 +8100,7 @@ h1, h2, h3, h4, h5,
       height: 2px;
       bottom: 0px;
       left: 0;
-      background-color: #f3e53d;
+      background-color: #2b98f0;
       visibility: hidden;
       -webkit-transform: scaleX(0);
       -ms-transform: scaleX(0);
@@ -8110,10 +8110,10 @@ h1, h2, h3, h4, h5,
       transition: all 0.5s ease-in-out 0s;
       z-index: -1; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #f3e53d; }
+      color: #2b98f0; }
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover:before {
         visibility: visible;
-        background-color: #f3e53d;
+        background-color: #2b98f0;
         -webkit-transform: scaleX(1);
         -ms-transform: scaleX(1);
         transform: scaleX(1); }
@@ -8161,10 +8161,10 @@ h1, h2, h3, h4, h5,
         background: #2b98f0;
         border-radius: 4px; } }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #f3e53d; }
+    color: #2b98f0; }
     .ftco-navbar-light .navbar-nav > .nav-item.active > a:before {
       visibility: visible;
-      background-color: #f3e53d;
+      background-color: #2b98f0;
       -webkit-transform: scaleX(1);
       -ms-transform: scaleX(1);
       transform: scaleX(1); }
@@ -10083,7 +10083,7 @@ textarea.form-control {
 }
 
 .nav-controls .dropdown-item:hover {
-  background-color: #f3e53d;
+  background-color: #2b98f0;
   color: #000;
 }
 
