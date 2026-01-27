@@ -748,7 +748,7 @@
     function toggleLanguage() {
         // This function is no longer used with dropdown
         // Keep for backwards compatibility
-        const langs = ['en', 'uk', 'ru'];
+        const langs = ['en', 'uk', 'ru', 'ro'];
         const currentIndex = langs.indexOf(currentLang);
         const nextIndex = (currentIndex + 1) % langs.length;
         currentLang = langs[nextIndex];
