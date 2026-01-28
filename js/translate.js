@@ -720,7 +720,7 @@
     };
 
     // Current language
-    let currentLang = localStorage.getItem('language') || 'en';
+    let currentLang = localStorage.getItem('language') || 'ro';
 
     // Initialize translation on page load
     function init() {
