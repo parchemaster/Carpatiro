@@ -10119,5 +10119,19 @@ textarea.form-control {
   }
 }
 
+.whatsapp-btn {
+  border-radius: 50px !important;
+  padding: 0.75em 2em !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+.whatsapp-text {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+
+
 
 
