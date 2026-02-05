@@ -925,6 +925,75 @@
     
   
 
+  <!-- Floating Free Quote Button -->
+  <button id="freeQuoteBtn" class="floating-quote-btn" data-toggle="modal" data-target="#quoteModal">
+    <i class="fa fa-calculator"></i>
+    <span data-translate="freequote.button">Free Quote</span>
+  </button>
+
+  <!-- Quote Modal -->
+  <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background: #2b98f0; color: white;">
+          <h5 class="modal-title" id="quoteModalLabel" data-translate="freequote.title">Get Your Free Quote</h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="contact-info-modal">
+            <h6 class="mb-3" data-translate="freequote.contactus">Contact us today for a free quote!</h6>
+
+            <div class="dbox w-100 d-flex align-items-start mb-3">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="fa fa-map-marker"></span>
+              </div>
+              <div class="text pl-3">
+                <p><strong data-translate="contact.address">Address:</strong><br>Bucharest zona Dristor</p>
+              </div>
+            </div>
+
+            <div class="dbox w-100 d-flex align-items-start mb-3">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="fa fa-phone"></span>
+              </div>
+              <div class="text pl-3">
+                <p><strong data-translate="contact.phone">Phone:</strong><br><a href="tel:+40731729039">+40 731 729 039</a></p>
+              </div>
+            </div>
+
+            <div class="dbox w-100 d-flex align-items-start mb-3">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="fa fa-paper-plane"></span>
+              </div>
+              <div class="text pl-3">
+                <p><strong data-translate="contact.email">Email:</strong><br><a href="mailto:info@carpatiro.com">info@carpatiro.com</a></p>
+              </div>
+            </div>
+
+            <div class="dbox w-100 d-flex align-items-start mb-3">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="fa fa-whatsapp"></span>
+              </div>
+              <div class="text pl-3">
+                <p><strong data-translate="contact.whatsapp">WhatsApp:</strong><br><a href="https://wa.me/message/G7ULRJQQWNT5I1" target="_blank">+40 731 729 039</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="tel:+40731729039" class="btn btn-primary">
+            <i class="fa fa-phone"></i> <span data-translate="freequote.callnow">Call Now</span>
+          </a>
+          <a href="https://wa.me/message/G7ULRJQQWNT5I1" class="btn btn-success" target="_blank">
+            <i class="fa fa-whatsapp"></i> <span data-translate="freequote.whatsapp">WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
