@@ -5,7 +5,7 @@
     // Translation dictionaries
     const translations = {
         en: {
-            'nav.home': 'Home',
+            'nav.home': 'About us',
             'nav.services': 'Services',
             'nav.portfolio': 'Portfolio',
             'nav.pricing': 'Pricing',
@@ -188,7 +188,7 @@
             "pricing": "Pricing",
         },
         uk: {
-            'nav.home': 'Головна',
+            'nav.home': 'Про нас',
             'nav.services': 'Послуги',
             'nav.portfolio': 'Портфоліо',
             'nav.pricing': 'Ціни',
@@ -371,7 +371,7 @@
             "pricing": "Ціни",
         },
         ru: {
-            'nav.home': 'Главная',
+            'nav.home': 'О нас',
             'nav.services': 'Услуги',
             'nav.portfolio': 'Портфолио',
             'nav.pricing': 'Цены',
@@ -554,7 +554,7 @@
             "pricing": "Цены",
         },
         ro: {
-            'nav.home': 'Acasă',
+            'nav.home': 'Despre noi',
             'nav.services': 'Servicii',
             'nav.portfolio': 'Portofoliu',
             'nav.pricing': 'Prețuri',
