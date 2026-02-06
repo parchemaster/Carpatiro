@@ -58,6 +58,35 @@
 	};
 	carousel();
 
+	// Before/After Carousel
+	var beforeAfterCarousel = function() {
+		$('.before-after-carousel').owlCarousel({
+			center: false,
+			loop: true,
+			items: 1,
+			margin: 30,
+			stagePadding: 0,
+			nav: true,
+			navText: ['<span class="fa fa-chevron-left">', '<span class="fa fa-chevron-right">'],
+			dots: true,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
+				}
+			}
+		});
+	};
+	beforeAfterCarousel();
+
 	$('nav .dropdown').hover(function(){
 		var $this = $(this);
 		// 	 timer;
@@ -205,6 +234,9 @@
 		}
 	};
 	stepperAnimation();
+
+	// Update Get Started buttons to link to contact section
+	$('a[data-translate="button.getstarted"]').attr('href', '#contact');
 
 	// Optional: Auto-cycle through stepper states (demo purposes)
 	// Uncomment to enable auto-cycling animation
