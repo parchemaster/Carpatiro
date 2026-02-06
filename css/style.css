@@ -9042,7 +9042,14 @@ textarea.form-control {
   background: #111111;
   position: relative;
   z-index: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+  .footer.ftco-section {
+    padding: 7em 0;
+    width: 100%;
+  }
   .footer a {
     color: #2b98f0; }
   .footer p {
@@ -10887,3 +10894,40 @@ textarea.form-control {
   }
 }
 
+/* ============================================
+   FOOTER FULL WIDTH ADJUSTMENTS
+   ============================================ */
+
+.footer {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.footer .container-fluid {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .footer .container-fluid {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footer .container-fluid {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
