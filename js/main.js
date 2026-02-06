@@ -176,6 +176,63 @@
 	};
 	contentWayPoint();
 
+	// Stepper Animation on Scroll
+	var stepperAnimation = function() {
+		var stepperSection = $('.stepper-wrapper, .vertical-stepper');
+
+		if (stepperSection.length > 0) {
+			stepperSection.waypoint(function(direction) {
+				if (direction === 'down' && !stepperSection.hasClass('animated')) {
+					stepperSection.addClass('animated');
+
+					// Animate horizontal stepper items
+					$('.stepper-item').each(function(index) {
+						var $this = $(this);
+						setTimeout(function() {
+							$this.addClass('fadeInUp ftco-animated');
+						}, index * 200);
+					});
+
+					// Animate vertical stepper items
+					$('.vertical-step').each(function(index) {
+						var $this = $(this);
+						setTimeout(function() {
+							$this.addClass('fadeInLeft ftco-animated');
+						}, index * 200);
+					});
+				}
+			}, { offset: '80%' });
+		}
+	};
+	stepperAnimation();
+
+	// Optional: Auto-cycle through stepper states (demo purposes)
+	// Uncomment to enable auto-cycling animation
+	/*
+	var stepperCycle = function() {
+		if ($('.stepper-wrapper').length > 0) {
+			var steps = $('.stepper-item, .vertical-step');
+			var currentStep = 0;
+
+			setInterval(function() {
+				// Remove all states
+				steps.removeClass('completed active');
+
+				// Add completed state to previous steps
+				for (var i = 0; i <= currentStep; i++) {
+					steps.eq(i).addClass('completed');
+				}
+
+				// Set current step as active
+				steps.eq(currentStep).removeClass('completed').addClass('active');
+
+				// Move to next step
+				currentStep = (currentStep + 1) % steps.length;
+			}, 3000);
+		}
+	};
+	stepperCycle();
+	*/
 
 })(jQuery);
 
