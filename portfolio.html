@@ -26,7 +26,10 @@
 		</div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Clean<span>Line</span></a>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="CleanLine Logo" style="height: 40px; margin-right: 10px; border-radius: 4px; vertical-align: middle;">
+                Clean<span>Line</span>
+            </a>
             <div class="nav-controls nav-right">
                 <div class="dropdown">
                     <a href="#" class="nav-link translate-btn dropdown-toggle" id="languageToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Change language">
@@ -56,9 +59,9 @@
             </div>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link" data-translate="nav.home">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-translate="nav.home">About us</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link" data-translate="nav.services">Services</a></li>
-                    <li class="nav-item"><a href="portfolio.html" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
+                    <li class="nav-item active"><a href="portfolio.html" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
                     <li class="nav-item"><a href="pricing.html" class="nav-link" data-translate="nav.pricing">Pricing</a></li>
                 </ul>
             </div>
@@ -77,110 +80,85 @@
       </div>
     </section>
 
-    <section class="ftco-section ftco-no-pb">
+    <!-- BEFORE/AFTER CAROUSEL Section -->
+    <section class="ftco-section ftco-no-pb" style="background-color: #f8f9fa;">
         <div class="container">
             <div class="row justify-content-center pb-5 mb-3">
-                <div class="col-md-12 heading-section  text-center ftco-animate">
-                    <span class="subheading" data-translate="project.subtitle">Our Project</span>
-                    <h2 data-translate="project.title">We have done many latest cleaning project</h2>
+                <div class="col-md-12 heading-section text-center ftco-animate">
+                    <span class="subheading" data-translate="beforeafter.subtitle">Our Results</span>
+                    <h2 data-translate="beforeafter.title">See the Difference</h2>
+                    <p data-translate="beforeafter.description">Real transformations from our cleaning services</p>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-1.jpg);">
-                        <a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.house">House Cleaning</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-2.jpg);">
-                        <a href="images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.window">Window Cleaning</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-3.jpg);">
-                        <a href="images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.pool">Pool Cleaning</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-4.jpg);">
-                        <a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.office">Office Cleaning</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-5.jpg);">
-                        <a href="images/work-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.carpet">Carpet Cleaning</a></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="before-after-carousel owl-carousel ftco-owl ftco-animate">
+
+                        <!-- Slide 1 -->
+                        <div class="item">
+                            <div class="before-after-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+                                        <div class="before-after-box before-box">
+                                            <div class="ba-image" style="background-image: url(images/work-1.jpg);">
+                                                <div class="ba-overlay"></div>
+                                            </div>
+                                            <div class="ba-label">
+                                                <span class="badge badge-danger" data-translate="beforeafter.before">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="before-after-box after-box">
+                                            <div class="ba-image" style="background-image: url(images/work-2.jpg);">
+                                                <div class="ba-overlay"></div>
+                                            </div>
+                                            <div class="ba-label">
+                                                <span class="badge badge-success" data-translate="beforeafter.after">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ba-description text-center mt-4">
+                                    <h4 data-translate="beforeafter.slide1.title">Living Room Deep Clean</h4>
+                                    <p data-translate="beforeafter.slide1.desc">Complete transformation with professional cleaning techniques</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-6.jpg);">
-                        <a href="images/work-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.garden">Garden Cleaning</a></h2>
+
+                        <!-- Slide 2 -->
+                        <div class="item">
+                            <div class="before-after-container">
+                                <div class="row no-gutters">
+                                    <div class="col-md-6">
+                                        <div class="before-after-box before-box">
+                                            <div class="ba-image" style="background-image: url(images/work-3.jpg);">
+                                                <div class="ba-overlay"></div>
+                                            </div>
+                                            <div class="ba-label">
+                                                <span class="badge badge-danger" data-translate="beforeafter.before">Before</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="before-after-box after-box">
+                                            <div class="ba-image" style="background-image: url(images/work-4.jpg);">
+                                                <div class="ba-overlay"></div>
+                                            </div>
+                                            <div class="ba-label">
+                                                <span class="badge badge-success" data-translate="beforeafter.after">After</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ba-description text-center mt-4">
+                                    <h4 data-translate="beforeafter.slide2.title">Kitchen Refresh</h4>
+                                    <p data-translate="beforeafter.slide2.desc">Spotless surfaces and sanitized areas for a healthy home</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-7.jpg);">
-                        <a href="images/work-7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.carpet">Carpet Cleaning</a></h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 ftco-animate">
-                    <div class="work img d-flex align-items-center" style="background-image: url(images/work-8.jpg);">
-                        <a href="images/work-8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-                            <span class="fa fa-expand"></span>
-                        </a>
-                        <div class="desc w-100 px-4 text-center pt-5 mt-5">
-                            <div class="text w-100 mb-3 mt-4">
-                                <h2><a href="work-single.html" data-translate="project.pool">Pool Cleaning</a></h2>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -194,7 +172,6 @@
                     <h2 class="footer-heading">CleanLine</h2>
                     <p data-translate="footer.description">CleanLine is a professional cleaning company specializing in Airbnb turnovers and general cleaning for houses and offices. We ensure spotless, well-prepared spaces with attention to detail, reliability, and high hygiene standards. Our goal is to help property owners and businesses maintain clean, welcoming environments effortlessly.</p>
                     <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
-                        <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
                         <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
                     </ul>
