@@ -11421,3 +11421,122 @@ textarea.form-control {
   }
 }
 
+/* ============================================
+   NAVIGATION FIXES FOR NARROW SMARTPHONES
+   ============================================ */
+
+@media (max-width: 575.98px) {
+  /* Уменьшаем размер логотипа */
+  .navbar-brand {
+    font-size: 16px !important;
+    margin-right: 5px !important;
+  }
+
+  .navbar-brand img {
+    height: 30px !important;
+    margin-right: 5px !important;
+  }
+
+  /* Оптимизация контейнера навигации */
+  .ftco_navbar .container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Контейнер кнопок справа */
+  .nav-controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+    margin-left: auto !important;
+  }
+
+  /* Кнопка языка */
+  .nav-controls .dropdown {
+    margin-right: 0 !important;
+  }
+
+  #languageToggle {
+    padding: 5px 8px !important;
+    font-size: 11px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 3px !important;
+  }
+
+  #languageToggle .fa-globe {
+    font-size: 14px !important;
+  }
+
+  #currentLang {
+    font-size: 11px !important;
+    padding: 2px 4px !important;
+  }
+
+  /* Кнопка WhatsApp - показываем только иконку */
+  .whatsapp-btn {
+    padding: 5px 8px !important;
+    margin-left: 0 !important;
+    min-width: auto !important;
+  }
+
+  .whatsapp-btn .whatsapp-text {
+    display: none !important;
+  }
+
+  .whatsapp-btn .fa-whatsapp {
+    margin: 0 !important;
+    font-size: 18px !important;
+  }
+
+  /* Кнопка меню (toggler) */
+  .navbar-toggler {
+    padding: 5px 8px !important;
+    margin-left: 0 !important;
+    font-size: 16px !important;
+  }
+
+  .navbar-toggler .fa-bars {
+    font-size: 18px !important;
+  }
+
+  /* Dropdown меню языков */
+  .nav-controls .dropdown-menu {
+    min-width: 80px !important;
+    font-size: 12px !important;
+  }
+
+  .nav-controls .dropdown-item {
+    padding: 0.4rem 0.8rem !important;
+    font-size: 12px !important;
+  }
+}
+
+/* Дополнительные стили для очень узких экранов */
+@media (max-width: 360px) {
+  .navbar-brand {
+    font-size: 14px !important;
+  }
+
+  .navbar-brand img {
+    height: 25px !important;
+  }
+
+  #languageToggle,
+  .whatsapp-btn,
+  .navbar-toggler {
+    padding: 4px 6px !important;
+  }
+
+  #languageToggle .fa-globe,
+  .whatsapp-btn .fa-whatsapp,
+  .navbar-toggler .fa-bars {
+    font-size: 16px !important;
+  }
+
+  #currentLang {
+    font-size: 10px !important;
+  }
+}
+
+
