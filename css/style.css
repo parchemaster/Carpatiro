@@ -11548,6 +11548,7 @@ textarea.form-control {
   overflow-x: auto;
   margin-bottom: 30px;
   -webkit-overflow-scrolling: touch;
+  position: relative;
 }
 
 .pricing-comparison-table {
@@ -11557,33 +11558,46 @@ textarea.form-control {
   border-collapse: separate;
   border-spacing: 0;
   background: #fff;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.pricing-comparison-table:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
 }
 
 .comparison-row {
   display: table-row;
+  transition: background-color 0.2s ease;
 }
 
 .comparison-row:nth-child(even):not(.header-row):not(.action-row) {
   background-color: #f8f9fa;
 }
 
+.comparison-row:not(.header-row):not(.action-row):hover {
+  background-color: #f0f0f5;
+}
+
 .comparison-cell {
   display: table-cell;
-  padding: 20px;
+  padding: 22px 20px;
   vertical-align: middle;
   text-align: center;
   border-bottom: 1px solid #e9ecef;
+  transition: all 0.2s ease;
 }
 
 .comparison-cell.feature-cell {
   text-align: left;
   font-weight: 500;
-  color: #333;
+  color: #2c3e50;
   width: 35%;
-  padding-left: 30px;
+  padding-left: 35px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .comparison-cell.plan-cell {
@@ -11594,18 +11608,21 @@ textarea.form-control {
 .header-row {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header-row .comparison-cell {
   border-bottom: none;
-  padding: 30px 20px;
+  padding: 35px 20px;
 }
 
 .header-row .feature-cell h5 {
   margin: 0;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Plan Headers */
@@ -11614,38 +11631,46 @@ textarea.form-control {
 }
 
 .plan-header .icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 15px;
-  background: rgba(255, 255, 255, 0.2);
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  background: rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 34px;
   color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-header .icon:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
 }
 
 .plan-header h4 {
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 15px;
-  min-height: 45px;
+  margin-bottom: 18px;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.3;
 }
 
 .plan-header .price {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: 700;
   color: #fff;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 .plan-header .price sup {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   margin-right: 5px;
 }
@@ -11665,79 +11690,102 @@ textarea.form-control {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: #28a745;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
   border-radius: 50%;
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
+  box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.check-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
 }
 
 .times-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  background: #dc3545;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   border-radius: 50%;
   color: #fff;
-  font-size: 18px;
+  font-size: 19px;
+  box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+  transition: all 0.3s ease;
+}
+
+.times-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
 }
 
 /* Action Row */
 .action-row {
-  background: #f8f9fa;
+  background: linear-gradient(to bottom, #fafbfc 0%, #f5f6f8 100%);
+  border-top: 2px solid #e9ecef;
 }
 
 .action-row .comparison-cell {
-  padding: 25px 20px;
+  padding: 30px 20px;
   border-bottom: none;
 }
 
 .action-row .feature-cell .min-order {
   color: #6c757d;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 }
 
 .action-row .btn {
-  padding: 12px 30px;
-  font-size: 14px;
+  padding: 14px 32px;
+  font-size: 15px;
   font-weight: 600;
-  border-radius: 30px;
+  border-radius: 50px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
 .action-row .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
 }
 
 /* Single Button Action Row */
 .action-row.single-button {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  border-top: 3px solid #667eea;
 }
 
 .action-row.single-button .single-action-cell {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 30px 20px;
+  padding: 35px 20px;
 }
 
 .action-row.single-button .min-order {
   color: #6c757d;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .action-row.single-button .btn-lg {
-  padding: 15px 50px;
-  font-size: 16px;
+  padding: 16px 55px;
+  font-size: 17px;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+}
+
+.action-row.single-button .btn-lg:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.55);
 }
 
 /* ===================================
@@ -11748,11 +11796,13 @@ textarea.form-control {
   .pricing-comparison-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .pricing-comparison-table {
     min-width: 700px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
   }
 
   /* For tables with 4+ columns, increase min-width */
@@ -11765,12 +11815,12 @@ textarea.form-control {
   }
 
   .comparison-cell {
-    padding: 15px;
+    padding: 18px 16px;
   }
 
   .comparison-cell.feature-cell {
-    width: 40%;
-    padding-left: 20px;
+    width: 38%;
+    padding-left: 25px;
     font-size: 14px;
   }
 
@@ -11779,22 +11829,23 @@ textarea.form-control {
   }
 
   .plan-header .icon {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    margin-bottom: 14px;
   }
 
   .plan-header h4 {
-    font-size: 16px;
-    min-height: 40px;
+    font-size: 17px;
+    min-height: 42px;
   }
 
   .plan-header .price {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .plan-header .price .number {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .plan-header .price .unit {
@@ -11803,14 +11854,19 @@ textarea.form-control {
 
   .check-icon,
   .times-icon {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 17px;
   }
 
   .action-row .btn {
-    padding: 10px 20px;
-    font-size: 12px;
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+
+  .action-row.single-button .btn-lg {
+    padding: 14px 45px;
+    font-size: 16px;
   }
 }
 
@@ -11822,24 +11878,12 @@ textarea.form-control {
   .pricing-comparison-wrapper {
     margin: 0;
     position: relative;
+    overflow-x: visible;
   }
 
-  /* Add scroll indicator shadow for tables that need scrolling */
+  /* Remove scroll indicator shadow for cleaner mobile look */
   .pricing-comparison-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 30px;
-    background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .pricing-comparison-wrapper.has-scroll::after {
-    opacity: 1;
+    display: none;
   }
 
   .pricing-comparison-table {
@@ -11847,6 +11891,11 @@ textarea.form-control {
     min-width: 100%;
     box-shadow: none;
     border-radius: 0;
+    border: none;
+  }
+
+  .pricing-comparison-table:hover {
+    box-shadow: none;
   }
 
   .comparison-row {
@@ -11862,6 +11911,10 @@ textarea.form-control {
     background: #fff;
   }
 
+  .comparison-row:not(.header-row):not(.action-row):hover {
+    background: #fff;
+  }
+
   .comparison-cell {
     display: block;
     width: 100%;
@@ -11869,7 +11922,7 @@ textarea.form-control {
     border: none;
   }
 
-  /* Mobile Header Row - Transform to sticky header */
+  /* Mobile Header Row - Sticky with clean design */
   .header-row {
     display: flex;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -11878,7 +11931,7 @@ textarea.form-control {
     z-index: 10;
     margin-bottom: 0;
     border-radius: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .header-row .feature-cell {
@@ -11887,8 +11940,8 @@ textarea.form-control {
 
   .header-row .plan-cell {
     width: 33.333%;
-    padding: 15px 10px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   .header-row .plan-cell:last-child {
@@ -11896,50 +11949,57 @@ textarea.form-control {
   }
 
   .plan-header .icon {
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    margin-bottom: 8px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .plan-header .icon:hover {
+    transform: none;
   }
 
   .plan-header h4 {
-    font-size: 12px;
+    font-size: 13px;
     min-height: auto;
-    margin-bottom: 8px;
-    line-height: 1.2;
+    margin-bottom: 10px;
+    line-height: 1.3;
   }
 
   .plan-header .price {
-    font-size: 16px;
-  }
-
-  .plan-header .price sup {
-    font-size: 10px;
-  }
-
-  .plan-header .price .number {
     font-size: 18px;
   }
 
-  .plan-header .price .unit {
-    font-size: 10px;
+  .plan-header .price sup {
+    font-size: 11px;
   }
 
-  /* Mobile Feature Rows */
+  .plan-header .price .number {
+    font-size: 20px;
+  }
+
+  .plan-header .price .unit {
+    font-size: 11px;
+  }
+
+  /* Mobile Feature Rows - Clean card-like design */
   .comparison-row:not(.header-row):not(.action-row) {
     display: flex;
     flex-wrap: wrap;
     border-bottom: 1px solid #e9ecef;
+    background: #fff;
   }
 
   .comparison-row:not(.header-row):not(.action-row) .feature-cell {
     width: 100%;
-    padding: 12px 15px;
-    background: #f8f9fa;
-    font-size: 13px;
+    padding: 14px 20px;
+    background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+    font-size: 14px;
     font-weight: 600;
     text-align: left;
     border-bottom: 1px solid #e9ecef;
+    color: #2c3e50;
   }
 
   .comparison-row:not(.header-row):not(.action-row) .plan-cell {
@@ -11947,7 +12007,7 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 10px;
+    padding: 16px 12px;
     border-right: 1px solid #e9ecef;
     background: #fff;
   }
@@ -11956,32 +12016,34 @@ textarea.form-control {
     border-right: none;
   }
 
-  /* Action Row Mobile */
+  /* Action Row Mobile - Clean and prominent */
   .action-row {
     display: block;
-    background: #f8f9fa;
-    padding: 20px 15px;
+    background: #fff;
+    padding: 25px 20px;
     margin-top: 20px;
+    border-top: 3px solid #667eea;
+    box-shadow: none;
   }
 
   .action-row .feature-cell {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 0 0 15px 0;
+    padding: 0 0 18px 0;
     background: transparent;
     border: none;
   }
 
   .action-row .feature-cell .min-order {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .action-row .plan-cell {
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .action-row .plan-cell:last-child {
@@ -11990,8 +12052,9 @@ textarea.form-control {
 
   /* Single Button Action Row Mobile */
   .action-row.single-button {
-    background: #f8f9fa;
-    padding: 25px 15px;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+    padding: 30px 20px;
+    box-shadow: none;
   }
 
   .action-row.single-button .single-action-cell {
@@ -12000,21 +12063,26 @@ textarea.form-control {
   }
 
   .action-row.single-button .min-order {
-    font-size: 14px;
-    margin-bottom: 15px;
+    font-size: 15px;
+    margin-bottom: 18px;
+    color: #495057;
   }
 
   .action-row.single-button .btn-lg {
     width: 100%;
-    padding: 14px 30px;
-    font-size: 15px;
+    padding: 16px 30px;
+    font-size: 16px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  }
+
+  .action-row.single-button .btn-lg:hover {
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
   }
 
   .check-icon,
   .times-icon {
-    width: 28px;
-    height: 28px;
-    font-size: 14px;
+    width: 32px;
+    height: 32px;
   }
 
   .action-row .btn {
@@ -12035,43 +12103,63 @@ textarea.form-control {
   }
 
   .comparison-row:not(.header-row):not(.action-row) .plan-cell {
-    padding: 12px 8px;
+    padding: 14px 8px;
   }
 
   .check-icon,
   .times-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
   }
 
   .action-row .btn {
-    padding: 10px 15px;
-    font-size: 12px;
+    padding: 12px 18px;
+    font-size: 13px;
   }
 
   .header-row .plan-cell {
-    padding: 12px 8px;
+    padding: 15px 8px;
   }
 
   .plan-header .icon {
-    width: 35px;
-    height: 35px;
-    font-size: 18px;
-    margin-bottom: 5px;
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+    margin-bottom: 8px;
   }
 
   .plan-header h4 {
     font-size: 11px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    line-height: 1.2;
   }
 
   .plan-header .price {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .plan-header .price .number {
-    font-size: 16px;
+    font-size: 17px;
+  }
+
+  .plan-header .price sup {
+    font-size: 10px;
+  }
+
+  .plan-header .price .unit {
+    font-size: 10px;
+  }
+
+  .action-row.single-button .btn-lg {
+    padding: 14px 25px;
+    font-size: 15px;
+  }
+
+  .action-row.single-button .min-order {
+    font-size: 13px;
+    margin-bottom: 15px;
   }
 }
 

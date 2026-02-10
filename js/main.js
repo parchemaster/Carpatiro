@@ -266,28 +266,6 @@
 	stepperCycle();
 	*/
 
-	// Pricing table scroll indicator for mobile
-	var pricingTableScroll = function() {
-		if ($(window).width() <= 991) {
-			$('.pricing-comparison-wrapper').each(function() {
-				var wrapper = $(this);
-				var table = wrapper.find('.pricing-comparison-table');
-
-				// Check if table is wider than wrapper
-				if (table[0] && table[0].scrollWidth > wrapper.width()) {
-					wrapper.addClass('has-scroll');
-				} else {
-					wrapper.removeClass('has-scroll');
-				}
-			});
-		}
-	};
-
-	// Run on load and resize
-	pricingTableScroll();
-	$(window).on('resize', function() {
-		pricingTableScroll();
-	});
 
 })(jQuery);
 
