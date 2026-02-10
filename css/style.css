@@ -11557,24 +11557,24 @@ textarea.form-control {
   padding-bottom: 20px;
 }
 
-.pricing-comparison-wrapper.has-scroll::after {
-  content: '← Scroll to see more →';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
-  animation: scrollHint 2s ease-in-out infinite;
-  z-index: 10;
-  white-space: nowrap;
-}
+/*.pricing-comparison-wrapper.has-scroll::after {*/
+/*  content: '← Scroll to see more →';*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  left: 50%;*/
+/*  transform: translateX(-50%);*/
+/*  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);*/
+/*  color: #fff;*/
+/*  padding: 8px 20px;*/
+/*  border-radius: 20px;*/
+/*  font-size: 12px;*/
+/*  font-weight: 600;*/
+/*  letter-spacing: 0.5px;*/
+/*  box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);*/
+/*  animation: scrollHint 2s ease-in-out infinite;*/
+/*  z-index: 10;*/
+/*  white-space: nowrap;*/
+/*}*/
 
 @keyframes scrollHint {
   0%, 100% {
