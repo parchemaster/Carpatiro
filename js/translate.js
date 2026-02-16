@@ -1354,6 +1354,12 @@
                 element.style.opacity = '1';
             }, 50);
         });
+
+        // Dispatch custom event for language change
+        const languageChangeEvent = new CustomEvent('languageChanged', {
+            detail: { language: lang }
+        });
+        window.dispatchEvent(languageChangeEvent);
     }
 
     // Wait for DOM to be ready

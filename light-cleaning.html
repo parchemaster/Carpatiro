@@ -650,6 +650,12 @@
           checkbox.addEventListener('change', updateCalculator);
         });
       });
+
+      // Listen for language changes globally
+      window.addEventListener('languageChanged', function(event) {
+        // Update calculator with new translations
+        updateCalculator();
+      });
     </script>
   </body>
 </html>
