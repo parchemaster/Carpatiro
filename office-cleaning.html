@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	  <title>Офисная уборка | Office Cleaning Service | CleanLine Cleaning</title>
+	  <meta name="description" content="Professional office cleaning service in Bucharest. Comprehensive cleaning for your office space.">
+	  <meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/jpeg" href="images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .service-features {
+        padding: 60px 0;
+      }
+      .feature-list {
+        list-style: none;
+        padding: 0;
+      }
+      .feature-list li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+      }
+      .feature-list li:before {
+        content: "✓";
+        color: #4CAF50;
+        font-weight: bold;
+        font-size: 24px;
+        margin-right: 15px;
+      }
+      .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: 30px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-radius: 5px;
+      }
+      .pricing-table {
+        width: 100%;
+        min-width: 650px;
+        border-collapse: collapse;
+        margin: 0;
+      }
+      .pricing-table th,
+      .pricing-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        white-space: nowrap;
+      }
+      .pricing-table th {
+        background-color: #4CAF50;
+        color: white;
+        font-weight: 500;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .pricing-table tr:hover {
+        background-color: #f5f5f5;
+      }
+      .pricing-table input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+
+      /* Custom scrollbar for table */
+      .table-wrapper::-webkit-scrollbar {
+        height: 8px;
+      }
+      .table-wrapper::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      .table-wrapper::-webkit-scrollbar-thumb {
+        background: #4CAF50;
+        border-radius: 10px;
+      }
+      .table-wrapper::-webkit-scrollbar-thumb:hover {
+        background: #45a049;
+      }
+
+      /* Mobile responsive styles */
+      @media (max-width: 768px) {
+        .pricing-table {
+          min-width: 600px;
+          font-size: 14px;
+        }
+        .pricing-table th,
+        .pricing-table td {
+          padding: 10px 8px;
+        }
+        .pricing-table input[type="checkbox"] {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .pricing-table {
+          min-width: 550px;
+          font-size: 13px;
+        }
+        .pricing-table th,
+        .pricing-table td {
+          padding: 8px 6px;
+        }
+      }
+      .additional-services {
+        margin-top: 40px;
+      }
+      .service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        transition: all 0.3s;
+      }
+      .service-item:hover {
+        background-color: #f9f9f9;
+        border-color: #4CAF50;
+      }
+      .service-item input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      .service-item label {
+        flex: 1;
+        margin: 0 15px;
+        cursor: pointer;
+      }
+      .service-item .price {
+        font-weight: bold;
+        color: #4CAF50;
+      }
+      .calculator {
+        position: sticky;
+        bottom: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 25px;
+        margin-top: 40px;
+        border-radius: 10px;
+        box-shadow: 0 -5px 20px rgba(0,0,0,0.2);
+      }
+      .calculator h3 {
+        color: white;
+        margin-bottom: 15px;
+      }
+      .selected-services {
+        margin-bottom: 15px;
+        max-height: 200px;
+        overflow-y: auto;
+      }
+      .selected-service-item {
+        background: rgba(255,255,255,0.1);
+        padding: 8px 12px;
+        margin-bottom: 8px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .total-price {
+        font-size: 28px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 8px;
+        margin-top: 15px;
+      }
+      .clear-btn {
+        background: #ff4757;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        width: 100%;
+        font-size: 16px;
+      }
+      .clear-btn:hover {
+        background: #ff3838;
+      }
+      .main-price-row {
+        background-color: #e8f5e9 !important;
+      }
+      .section-title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	    	<a class="navbar-brand" href="index.html">
+          <img src="images/logo.png" alt="CleanLine Logo" style="height: 40px; margin-right: 10px; border-radius: 4px; vertical-align: middle;">
+          Clean<span>Line</span>
+        </a>
+      <div class="nav-controls nav-right">
+        <div class="dropdown">
+          <a href="#" class="nav-link translate-btn dropdown-toggle" id="languageToggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Change language">
+            <i class="fa fa-globe"></i> <span id="currentLang">RO</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="languageToggle">
+			  <a class="dropdown-item lang-option" href="#" data-lang="en">
+				  <span>en</span>
+			  </a>
+            <a class="dropdown-item lang-option" href="#" data-lang="ro">
+              <span>ro</span>
+            </a>
+            <a class="dropdown-item lang-option" href="#" data-lang="uk">
+              <span>ua</span>
+            </a>
+            <a class="dropdown-item lang-option" href="#" data-lang="ru">
+              <span>ru</span>
+            </a>
+          </div>
+        </div>
+		  <a href="https://wa.me/message/G7ULRJQQWNT5I1" class="btn btn-success ml-2 whatsapp-btn" target="_blank">
+			  <i class="fa fa-whatsapp"></i> <span class="whatsapp-text">WhatsApp</span>
+		  </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span data-translate="menu.language" class="fa fa-bars"></span>
+        </button>
+      </div>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link" data-translate="nav.home">About us</a></li>
+	        	<li class="nav-item"><a href="services.html" class="nav-link" data-translate="nav.services">Services</a></li>
+	        	<li class="nav-item"><a href="portfolio.html" class="nav-link" data-translate="nav.portfolio">Portfolio</a></li>
+	        	<li class="nav-item"><a href="pricing.html" class="nav-link" data-translate="nav.pricing">Pricing</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <!-- Page Header -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+          <div class="col-md-9 ftco-animate pb-5">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html"><span data-translate="officecleaning.breadcrumb.home">Главная</span> <i class="ion-ios-arrow-forward"></i></a></span> <span data-translate="officecleaning.breadcrumb.current">Офисная уборка</span> <i class="ion-ios-arrow-forward"></i></p>
+            <h1 class="mb-3 bread" data-translate="officecleaning.pagetitle">Офисная уборка</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Features Section -->
+    <section class="ftco-section service-features">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-10 text-center">
+            <h2 class="section-title" data-translate="officecleaning.features.title">Что входит в офисную уборку</h2>
+            <p class="lead" data-translate="officecleaning.features.subtitle">Наша офисная уборка включает в себя все необходимые процедуры для поддержания чистоты и порядка в вашем офисе</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="feature-list">
+              <li data-translate="officecleaning.feature1">Пылесошение пола</li>
+              <li data-translate="officecleaning.feature2">Мойка полов</li>
+              <li data-translate="officecleaning.feature3">Мойка зеркал, перегородок</li>
+              <li data-translate="officecleaning.feature4">Влажная уборка поверхностей</li>
+              <li data-translate="officecleaning.feature5">Проветревания / дезинфекция помещений</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="feature-list">
+              <li data-translate="officecleaning.feature6">Удаление пыли, паутины</li>
+              <li data-translate="officecleaning.feature7">Мойка сан-узла</li>
+              <li data-translate="officecleaning.feature8">Смена туалетной бумаги, мыльных а так же средств для гигиены (по согласованию)</li>
+              <li data-translate="officecleaning.feature9">Смена / Вынос бытового мусора</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table Section -->
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-4">
+          <div class="col-md-10 text-center">
+            <h2 class="section-title" data-translate="officecleaning.pricing.title">Цены и площади</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="table-wrapper">
+              <table class="pricing-table">
+                <thead>
+                  <tr>
+                    <th data-translate="officecleaning.table.select">Выбрать</th>
+                    <th data-translate="officecleaning.table.type">Площадь</th>
+                    <th data-translate="officecleaning.table.price">Цена</th>
+                    <th data-translate="officecleaning.table.time">Время</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="main-price-row">
+                    <td><input type="checkbox" class="main-service-checkbox" data-name-key="officecleaning.type.upto100" data-price="400" data-time="2-4" data-time-key="officecleaning.time.hours"></td>
+                    <td data-translate="officecleaning.type.upto100">Уборка до 100 м²</td>
+                    <td>400 Lei</td>
+                    <td>2-4 <span data-translate="officecleaning.time.hours">час</span></td>
+                  </tr>
+                  <tr class="main-price-row">
+                    <td><input type="checkbox" class="main-service-checkbox" data-name-key="officecleaning.type.100to200" data-price="1000" data-time="4-8" data-time-key="officecleaning.time.hours"></td>
+                    <td data-translate="officecleaning.type.100to200">Уборка 100-200 м²</td>
+                    <td>1000 Lei</td>
+                    <td>4-8 <span data-translate="officecleaning.time.hours">час</span></td>
+                  </tr>
+                  <tr class="main-price-row">
+                    <td><input type="checkbox" class="main-service-checkbox" data-name-key="officecleaning.type.200to500" data-price="1500" data-time="8-10" data-time-key="officecleaning.time.hours"></td>
+                    <td data-translate="officecleaning.type.200to500">Уборка 200-500 м²</td>
+                    <td>1500 Lei</td>
+                    <td>8-10 <span data-translate="officecleaning.time.hours">час</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Services Section -->
+        <div class="row additional-services">
+          <div class="col-12">
+            <h2 class="section-title" data-translate="officecleaning.additional.title">Дополнительные услуги</h2>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service1" data-name-key="officecleaning.service.windows" data-price="10">
+              <label for="service1" data-translate="officecleaning.additional.windows">Мойка окон (1 шт)</label>
+              <span class="price">10 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service2" data-name-key="officecleaning.service.cabinet" data-price="100">
+              <label for="service2" data-translate="officecleaning.additional.cabinet">Мойка внутренней шкаф</label>
+              <span class="price">100 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service3" data-name-key="officecleaning.service.lamps" data-price="100">
+              <label for="service3" data-translate="officecleaning.additional.lamps">Мойка ламп, торшеров, люстр</label>
+              <span class="price">100 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service4" data-name-key="officecleaning.service.baseboards" data-price="50">
+              <label for="service4" data-translate="officecleaning.additional.baseboards">Чистка плинтусов, карнизов</label>
+              <span class="price">50 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service5" data-name-key="officecleaning.service.grout" data-price="10">
+              <label for="service5" data-translate="officecleaning.additional.grout">Мойка межплиточные швы (1 м/кв)</label>
+              <span class="price">10 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service6" data-name-key="officecleaning.service.laundry" data-price="20">
+              <label for="service6" data-translate="officecleaning.additional.laundry">Стирка личных вещей (5,6 кг)</label>
+              <span class="price">20 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service7" data-name-key="officecleaning.service.ironing" data-price="20">
+              <label for="service7" data-translate="officecleaning.additional.ironing">Глажка личных вещей (1 м/кв)</label>
+              <span class="price">20 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service8" data-name-key="officecleaning.service.bedding" data-price="50">
+              <label for="service8" data-translate="officecleaning.additional.bedding">Смена постельного белья</label>
+              <span class="price">50 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service9" data-name-key="officecleaning.service.dishes" data-price="20">
+              <label for="service9" data-translate="officecleaning.additional.dishes">Мойка посуды</label>
+              <span class="price">20 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service10" data-name-key="officecleaning.service.organizing" data-price="50">
+              <label for="service10" data-translate="officecleaning.additional.organizing">Сортировка, организация вещей</label>
+              <span class="price">50 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service11" data-name-key="officecleaning.service.zone" data-price="200">
+              <label for="service11" data-translate="officecleaning.additional.zone">Любая отдельная зона</label>
+              <span class="price">200 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service12" data-name-key="officecleaning.service.balcony" data-price="200">
+              <label for="service12" data-translate="officecleaning.additional.balcony">Полная уборка балкона, терассы, беседки</label>
+              <span class="price">200 Lei</span>
+            </div>
+
+            <div class="service-item">
+              <input type="checkbox" class="additional-service-checkbox" id="service13" data-name-key="officecleaning.service.walls" data-price="7.5" data-price-range="5-10">
+              <label for="service13" data-translate="officecleaning.additional.walls">Мойка стен - 5-10 Lei м/кв</label>
+              <span class="price">7.5 Lei</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculator Section -->
+        <div class="row">
+          <div class="col-12">
+            <div class="calculator">
+              <h3 data-translate="officecleaning.calculator.title">💰 Калькулятор стоимости</h3>
+              <div class="selected-services" id="selectedServices">
+                <p style="opacity: 0.8;" data-translate="officecleaning.calculator.placeholder">Выберите услуги для расчета стоимости...</p>
+              </div>
+              <div class="total-price">
+                <span data-translate="officecleaning.calculator.total">Итого:</span> <span id="totalPrice">0</span> Lei
+              </div>
+              <button class="clear-btn" onclick="clearAll()" data-translate="officecleaning.calculator.clear">Очистить все</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+        <footer class="footer ftco-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                <h2 class="footer-heading">CleanLine</h2>
+                <p data-translate="footer.description">CleanLine is a professional cleaning company specializing in Airbnb turnovers and general cleaning for houses and offices. We ensure spotless, well-prepared spaces with attention to detail, reliability, and high hygiene standards. Our goal is to help property owners and businesses maintain clean, welcoming environments effortlessly.</p>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-4">
+                  <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
+                <h2 class="footer-heading" data-translate="footer.quicklinks">Quick Links</h2>
+                <ul class="list-unstyled">
+                  <li><a href="index.html" class="py-1 d-block" data-translate="footer.home">Home</a></li>
+                  <li><a href="services.html" class="py-1 d-block" data-translate="footer.services">Services</a></li>
+                  <li><a href="portfolio.html" class="py-1 d-block" data-translate="footer.works">Works</a></li>
+                </ul>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                <h2 class="footer-heading" data-translate="footer.questions">Have a Questions?</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                    <li><span class="icon fa fa-map-marker"></span><span class="text" >Bucharest zona Dristor</span></li>
+                    <li><a href="tel:+40 731 729 039" ><span class="icon fa fa-phone"></span><span class="text">+40 731 729 039</span></a></li>
+                    <li><a href="mailto:info@carpatiro.com"><span class="icon fa fa-paper-plane"></span><span class="text">info@carpatiro.com</span></a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+
+            </div>
+          </div>
+        </footer>
+
+        <!-- Floating Free Quote Button -->
+        <button id="freeQuoteBtn" class="floating-quote-btn" data-toggle="modal" data-target="#quoteModal">
+          <i class="fa fa-calculator"></i>
+          <span data-translate="freequote.button">Free Quote</span>
+        </button>
+
+        <!-- Quote Modal -->
+        <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="background: #2b98f0; color: white;">
+                <h5 class="modal-title" id="quoteModalLabel" data-translate="freequote.title">Get Your Free Quote</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="contact-info-modal">
+                  <h6 class="mb-3" data-translate="freequote.contactus">Contact us today for a free quote!</h6>
+
+                  <div class="dbox w-100 d-flex align-items-start mb-3">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-map-marker"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><strong data-translate="contact.address">Address:</strong><br>Bucharest zona Dristor</p>
+                    </div>
+                  </div>
+
+                  <div class="dbox w-100 d-flex align-items-start mb-3">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-phone"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><strong data-translate="contact.phone">Phone:</strong><br><a href="tel:+40731729039">+40 731 729 039</a></p>
+                    </div>
+                  </div>
+
+                  <div class="dbox w-100 d-flex align-items-start mb-3">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-paper-plane"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><strong data-translate="contact.email">Email:</strong><br><a href="mailto:info@carpatiro.com">info@carpatiro.com</a></p>
+                    </div>
+                  </div>
+
+                  <div class="dbox w-100 d-flex align-items-start mb-3">
+                    <div class="icon d-flex align-items-center justify-content-center">
+                      <span class="fa fa-whatsapp"></span>
+                    </div>
+                    <div class="text pl-3">
+                      <p><strong data-translate="contact.whatsapp">WhatsApp:</strong><br><a href="https://wa.me/message/G7ULRJQQWNT5I1" target="_blank">+40 731 729 039</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a href="tel:+40731729039" class="btn btn-primary">
+                  <i class="fa fa-phone"></i> <span data-translate="freequote.callnow">Call Now</span>
+                </a>
+                <a href="https://wa.me/message/G7ULRJQQWNT5I1" class="btn btn-success" target="_blank">
+                  <i class="fa fa-whatsapp"></i> <span data-translate="freequote.whatsapp">WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/translate.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      // Load saved data from localStorage
+      function loadFromLocalStorage() {
+        const savedData = localStorage.getItem('officeCleaningServices');
+        if (savedData) {
+          const data = JSON.parse(savedData);
+
+          // Restore main service checkboxes
+          document.querySelectorAll('.main-service-checkbox').forEach(checkbox => {
+            const nameKey = checkbox.dataset.nameKey;
+            if (data.mainServices && data.mainServices.includes(nameKey)) {
+              checkbox.checked = true;
+            }
+          });
+
+          // Restore additional service checkboxes
+          document.querySelectorAll('.additional-service-checkbox').forEach(checkbox => {
+            const nameKey = checkbox.dataset.nameKey;
+            if (data.additionalServices && data.additionalServices.includes(nameKey)) {
+              checkbox.checked = true;
+            }
+          });
+
+          updateCalculator();
+        }
+      }
+
+      // Save to localStorage
+      function saveToLocalStorage() {
+        const mainServices = [];
+        const additionalServices = [];
+
+        document.querySelectorAll('.main-service-checkbox:checked').forEach(checkbox => {
+          mainServices.push(checkbox.dataset.nameKey);
+        });
+
+        document.querySelectorAll('.additional-service-checkbox:checked').forEach(checkbox => {
+          additionalServices.push(checkbox.dataset.nameKey);
+        });
+
+        const data = {
+          mainServices,
+          additionalServices,
+          timestamp: new Date().toISOString()
+        };
+
+        localStorage.setItem('officeCleaningServices', JSON.stringify(data));
+      }
+
+      // Update calculator
+      function updateCalculator() {
+        const selectedServicesDiv = document.getElementById('selectedServices');
+        const totalPriceSpan = document.getElementById('totalPrice');
+
+        let total = 0;
+        let servicesHTML = '';
+
+        // Calculate main services
+        document.querySelectorAll('.main-service-checkbox:checked').forEach(checkbox => {
+          const nameKey = checkbox.dataset.nameKey;
+          const name = window.getTranslation ? window.getTranslation(nameKey) : nameKey;
+          const price = parseFloat(checkbox.dataset.price);
+          total += price;
+          servicesHTML += `
+            <div class="selected-service-item">
+              <span>${name}</span>
+              <span>${price} Lei</span>
+            </div>
+          `;
+        });
+
+        // Calculate additional services
+        document.querySelectorAll('.additional-service-checkbox:checked').forEach(checkbox => {
+          const nameKey = checkbox.dataset.nameKey;
+          const name = window.getTranslation ? window.getTranslation(nameKey) : nameKey;
+          const price = parseFloat(checkbox.dataset.price);
+          total += price;
+          servicesHTML += `
+            <div class="selected-service-item">
+              <span>${name}</span>
+              <span>${price} Lei</span>
+            </div>
+          `;
+        });
+
+        if (servicesHTML === '') {
+          const placeholderText = window.getTranslation ? window.getTranslation('officecleaning.calculator.placeholder') : 'Выберите услуги для расчета стоимости...';
+          selectedServicesDiv.innerHTML = `<p style="opacity: 0.8;">${placeholderText}</p>`;
+        } else {
+          selectedServicesDiv.innerHTML = servicesHTML;
+        }
+
+        totalPriceSpan.textContent = total.toFixed(2);
+
+        // Save to localStorage
+        saveToLocalStorage();
+      }
+
+      // Clear all selections
+      function clearAll() {
+        document.querySelectorAll('.main-service-checkbox, .additional-service-checkbox').forEach(checkbox => {
+          checkbox.checked = false;
+        });
+        updateCalculator();
+        localStorage.removeItem('officeCleaningServices');
+      }
+
+      // Add event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        // Load saved data
+        loadFromLocalStorage();
+
+        // Main services checkboxes
+        document.querySelectorAll('.main-service-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', function() {
+            // Allow only one main service to be selected
+            if (this.checked) {
+              document.querySelectorAll('.main-service-checkbox').forEach(cb => {
+                if (cb !== this) cb.checked = false;
+              });
+            }
+            updateCalculator();
+          });
+        });
+
+        // Additional services checkboxes
+        document.querySelectorAll('.additional-service-checkbox').forEach(checkbox => {
+          checkbox.addEventListener('change', updateCalculator);
+        });
+      });
+
+      // Listen for language changes globally
+      window.addEventListener('languageChanged', function(event) {
+        // Update calculator with new translations
+        updateCalculator();
+      });
+    </script>
+  </body>
+</html>
